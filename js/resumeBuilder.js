@@ -5,45 +5,6 @@
 
 "use strict";
 
-/*variables to contain formatted HTML strings*/
-var formattedheaderName;
-var formattedheaderRole;
-var formattedcontactGeneric;
-
-var formattedMobile;
-var formattedEmail;
-var formattedTwitter;
-var formattedGithub;
-var formattedBlog;
-var formattedLocation;
-
-var formattedbioPic;
-var formattedwelcomeMsg;
-var formattedskillsStart;
-var formattedskills;
-
-var formattedschoolName;
-var formattedschoolDegree;
-var formattedschoolDates;
-var formattedschoolLocation;
-var formattedschoolMajor;
-
-var formattedonlineTitle;
-var formattedonlineSchool;
-var formattedonlineDate;
-var formattedURL;
-
-var formattedEmployer;
-var formattedTitle;
-var formattedLocation;
-var formattedDates;
-var formattedDescription;
-
-var formattedprojectTitle;
-var formattedprojectDates;
-var formattedprojectDescription;
-var formattedprojectImage;
-
 var	bio = {
 		"name": "Arthur Vargas",
 		"role": "Developer",
@@ -57,7 +18,7 @@ var	bio = {
 		},
 		"welcomeMessage": "Welcome to my online resume!",
 		"skills": ["HTML", "CSS", "JavaScript", "Java"],
-		"biopic": "http://www.dsicomedytheater.com/pix/people/Arthur_Vargas.jpg",
+		"biopic": "https://scontent-atl3-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/10923195_10102344007357379_8615111343668036106_n.jpg?oh=bc5395b99aa63d654089fa6fd45e5c7c&oe=57BFFF6B",
 		"display": function() {
 			
 			//assign formatted HTML to formattedVariable
@@ -187,7 +148,7 @@ var	work = {
 				var formattedLocation = HTMLworkLocation.replace("%data%",work.jobs[i].location);
 				var formattedDates = HTMLworkDates.replace("%data%",work.jobs[i].dates);
 				var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[i].description);
-				$(".work-entry:last").append(formattedEmployer,formattedTitle,formattedLocation,formattedDates,formattedDescription);
+				$(".work-entry:last").append(formattedEmployer + formattedTitle,formattedLocation,formattedDates,formattedDescription);
 			}
 		}
 };
