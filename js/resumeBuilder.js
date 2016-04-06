@@ -69,38 +69,69 @@ var	bio = {
 
 var education = {
 		"schools": [{
+			"url": "https://www.ncsu.edu/",
 			"name": "North Carolina State University",
 			"location": "Raleigh, NC",
 			"degree": "BS & BA",
 			"majors": ["English", "Biology"],
-			"dates": "2006",
-			"url": "www.ncsu.edu"
+			"dates": "2006"
 		}],
 		"onlineCourses": [{
+			"url": "https://www.udacity.com/course/javascript-basics--ud804",
 			"title": "JavaScript Basics",
 			"school": "Udacity",
-			"date": "2016",
-			"url": "www.udacity.com"
+			"date": "2016"
 		}, {
+			"url": "whttps://www.udacity.com/course/how-to-use-git-and-github--ud775",
 			"title": "How to Use Git and Github",
 			"school": "Udacity",
-			"date": "2015",
-			"url": "www.udacity.com"
+			"date": "2015"
 		}, {
+			"url": "https://www.udacity.com/course/intro-to-html-and-css--ud304",
 			"title": "Intro to HTML and CSS",
 			"school": "Udacity",
-			"date": "2015",
-			"url": "www.udacity.com"
+			"date": "2015"
+		}, {
+			"url": "https://www.udacity.com/course/intro-to-jquery--ud245",
+			"title": "Intro to jQuery",
+			"school": "Udacity",
+			"date": "2016"
+		}, {
+			"url": "https://www.udacity.com/course/object-oriented-javascript--ud015",
+			"title": "Object Oriented JavaScript",
+			"school": "Udacity",
+			"date": "2016"
+		}, {
+			"url": "https://www.udacity.com/course/html5-canvas--ud292",
+			"title": "HTML5 Canvas",
+			"school": "Udacity",
+			"date": "2016"
+		}, {
+			"url": "http://www.stat.ncsu.edu/courses/course.php?id=ST513",
+			"title": "ST 531: Statistics for Management",
+			"school": "North Carolina State University",
+			"date": "2014"
+		}, {
+			"url": "https://www.waketech.edu/student-services/catalog/course-descriptions?cat_name=CSC",
+			"title": "CS 151: JAVA Programming",
+			"school": "Wake Technical Community College",
+			"date": "2015"
+		}, {
+			"url": "https://courses.ncsu.edu/csc216/lec/601/",
+			"title": "CS 213: Programming Concepts",
+			"school": "North Carolina State University",
+			"date": "2016"
 		}],
 		"display": function() {
 			
 			$("#education").append(HTMLschoolStart);
 			for(var i = 0; i < education.schools.length; i++) {
+				var formattedschoolURL = HTMLschoolURL.replace("%data%",education.schools[i].url);
 				var formattedschoolName = HTMLschoolName.replace("%data%",education.schools[i].name);
 				var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
 				var formattedschoolDates = HTMLschoolDates.replace("%data%", education.schools[i].dates);
 				var formattedschoolLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
-				$(".education-entry:last").append(formattedschoolName + formattedschoolDegree,formattedschoolDates,
+				$(".education-entry:last").append(formattedschoolURL + formattedschoolName + formattedschoolDegree,formattedschoolDates,
 						formattedschoolLocation);
 				for(var j = 0; j < education.schools[i].majors.length; j++) {
 					var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].majors[j]);
@@ -110,29 +141,32 @@ var education = {
 			$("#education").append(HTMLonlineClasses);
 			for(var i = 0; i < education.onlineCourses.length; i++) {
 				$("#education").append(HTMLschoolStart);
+				var formattedonlineClassURL = HTMLonlineClassURL.replace("%data%",education.onlineCourses[i].url);
 				var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
 				var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
 				var formattedonlineDate = HTMLonlineDates.replace("%data%", education.onlineCourses[i].date);
-				var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[i].url);
-				$(".education-entry:last").append(formattedonlineTitle + formattedonlineSchool, formattedonlineDate, formattedURL);	
+				$(".education-entry:last").append(formattedonlineClassURL + formattedonlineTitle, formattedonlineDate, formattedonlineSchool);	
 			}
 		}
 };
 
 var	work = {
 		"jobs": [{
+			"url": "http://www.reichhold.com/",
 			"employer": "Reichhold Inc.",
 			"title": "Sales Trainee",
 			"location": "Durham, NC",
 			"dates": "07/2007 - 10/2008",
-			"description": "A global supplier to the Composite & Coating Industry."
+			"description": "A global supplier to the Composite & Coating Industry.",
 		}, {
+			"url": "http://www.polyzen.com/",
 			"employer": "Polyzen Inc.",
 			"title": "Inside Sales Representative",
 			"location": "Apex, NC",
 			"dates": "05/2009 - 08/2014",
 			"description": "A contract manufacturer of disposable medical devices."
 		}, {
+			"url": "http://www.roblingmedical.com/",
 			"employer": "Robling Medical Inc.",
 			"title": "Inside Sales Representative",
 			"location": "Apex, NC",
@@ -143,12 +177,13 @@ var	work = {
 			
 			for(var i = 0; i < work.jobs.length; i++) {
 				$("#workExperience").append(HTMLworkStart);
-				var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[i].employer);
+				var formattedEmployerURL = HTMLworkEmployerURL.replace("%data%",work.jobs[i].url);
+				var	formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[i].employer);
 				var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[i].title);
 				var formattedLocation = HTMLworkLocation.replace("%data%",work.jobs[i].location);
 				var formattedDates = HTMLworkDates.replace("%data%",work.jobs[i].dates);
 				var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[i].description);
-				$(".work-entry:last").append(formattedEmployer + formattedTitle,formattedLocation,formattedDates,formattedDescription);
+				$(".work-entry:last").append(formattedEmployerURL + formattedEmployer + formattedTitle,formattedLocation,formattedDates,formattedDescription);
 			}
 		}
 };
@@ -158,7 +193,7 @@ var projects = {
                 	"title": "Portfolio Website",
                 	"dates": "2016",
                 	"description": "A portfolio of development work",
-                	"images": ["images/Project_photo1.jpg",]
+                	"images": ["images/project_photo1.jpg",]
 				}],		
 		"display" : function() {
 						"use strict";
