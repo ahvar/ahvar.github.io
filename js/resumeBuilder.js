@@ -75,6 +75,13 @@ var education = {
 			"degree": "BS & BA",
 			"majors": ["English", "Biology"],
 			"dates": "2006"
+			}, {
+			"url": "https://www.ncsu.edu/",
+			"name": "North Carolina State University",
+			"location": "Raleigh, NC",
+			"degree": "Computer Programming Certificate",
+			"majors": ["NA"],
+			"dates": "2018"
 		}],
 		"onlineCourses": [{
 			"url": "https://www.udacity.com/course/javascript-basics--ud804",
