@@ -1,0 +1,111 @@
+@CHARSET "ISO-8859-1";
+body {
+    font family: 'Catamaran', sans-serif;
+
+    background-image: url(images/galaxy.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #FFCC00;
+    font: 300;
+    background-color: #FFFFCC;
+}
+
+.text-muted {
+    color: #FFCC00;
+}
+
+.text-thin {
+    font-weight: 90;
+}
+
+.title-super {
+    font-size: 70px;
+}
+
+.title-logo {
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 300px) {
+    p {
+        background-color: blue;
+    }
+}
+
+.row {
+    width = 100%;
+    margin-bottom = 20px;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projects {
+    margin-bottom: 60px;
+}
+
+.projectpic {
+    width: 380px;
+    height: 300px;
+    margin-left: 90px;
+    border-radius: 60px / 40px;
+    border-color: aqua #FFCC00;
+    border-style: solid;
+    border-width: 6px;
+
+
+}
+
+#summary {
+    margin: 30px;
+    margin-bottom: 60px;
+    font-weight: thin;
+    font-size: 1.5em;
+    color: #FFCC00;
+}
+
+.modal {
+    color: black;
+    font-weight: thin;
+}
+
+.fb {
+    width: 130px;
+    height: 130px;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
+.li {
+    margin-bottom: 100px;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.col-sm-2 .col-md-2 .col-lg-2 {
+    width = 16.66%;
+    overflow: auto;
+}
+
+.col-sm-10 .col-md-10 .col-lg-10 {
+    width = 83.33%;
+    overflow: auto;
+}
+
+.col-sm-3 .col-md-3 .col-lg-3 {
+    width = 25%;
+}
+
+.col-sm-9 .col-md-9 .col-lg-9 {
+    width = 75%;
+}
+
+.col-sm-4 .col-md-4 .col-lg-4 {
+    width = 33.33%;
+}
+
+.col-sm-6 .col-md-6 .col-lg-6 {
+    width = 50%;
+}

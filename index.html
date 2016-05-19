@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Arthur Vargas | Developer | Raleigh, NC</title>
+
+ <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- jQuery minified -->
+    <script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Catamaran:300,100' rel='stylesheet' type='text/css'>
+    
+    <!-- JS file to help run portfolio pages -->
+    <script src="helper.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class = "col-sm-12 col-md-12 col-lg-12 text-center text-uppercase header">
+                <h1 class="title-super text-thin ">Arthur Vargas</h1> 
+                <h3 class="text-thin">Developer</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class = "col-sm-12 col-md-12 col-lg-12">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="summary">
+                <p>Hello! I am a part-time, adult student at <a href="http://www.ncsu.edu/">North Carolina State University (NCSU)</a> where I am completing requirements for the <a href="http://engineeringonline.ncsu.edu/PS/CPC.html">Computer Programming Certificate (CPC)</a>.  I am also working on <a href="https://www.udacity.com/?utm_source=adwords&amp;utm_medium=search&amp;utm_campaign=2016-03-adwords-search-brand&amp;gclid=CJvH_4mh0cwCFUI9gQodXjUOrA">Udacity's</a> <a href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001">Front-end Web Developer NanoDegree</a>.  I used BootStrap to create this portfolio, along with all the necessary HTML and CSS. Click on the images in the "Featured Work" section for a brief project description and then checkout the pages for yourself.</p>
+            </div>
+        </div> 
+        <div class="row">
+            <div class = "col-sm-12 col-md-12 col-lg-12 text-thin text-muted text-center">
+                <h1>Featured Work</h1>
+            </div>
+        </div>
+        <div class="row projects">
+            <div class="col-sm-6 col-md-6 col-lg-6 text-center text-thin text-muted">
+                <h3>Resume</h3><img src="images/resumepic.png" class="img-responsive projectpic" alt="project pic" data-toggle="modal" data-target="#resume">
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6 text-center text-thin text-muted">
+                 <h3>Frogger</h3><img src="images/froggerpic.png" class="img-responsive projectpic" alt="project pic" data-toggle="modal" data-target="#frogger">
+        	</div>  
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <a href="https://github.com/ahvar"><img src="images/github-128.png" alt="github" class="img-responsive"></a>
+            </div>
+             <div class="col-sm-4 col-md-4 col-lg-4">
+                 <a href="https://www.linkedin.com/in/arthur-vargas-18838612?trk=nav_responsive_tab_profile"><img src="images/linkedin.png" alt="LinkedIn" class="img-responsive li"></a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 fb">
+                <a href="https://www.facebook.com/arthur.vargas.395">
+                    <img src="images/fb-art.jpg" alt="fb icon" class="img-responsive" alt="facebook"></a>
+            </div>
+        </div>
+    </div>
+
+   <!-- Modal -->
+    <div class="modal fade" id="resume" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title" id="myModalLabel">My Resume</h4>
+                </div>
+                <div class="modal-body">
+                    For this project I built four JavaScript objects to represent the different sections of my resume. I then used JavaScript to iterate through each object and append its information to my index.html file.  To give the reviewer a visual of the places I've worked, I added an interactive map at the bottom of my resume. Click the image to checkout my resume!
+                    <br>
+                    <a href="resume/index.html"><img class="img-responsive" src="images/resumepic.png"></a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Modal -->
+    <div class="modal fade" id="frogger" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title" id="myModalLabel">Frogger</h4>
+                </div>
+                <div class="modal-body">
+                    This is a clone of the classic arcade game, Frogger.  The development of complex web applications frequently requires many objects that perform similar functions, and this project presented a great opportunity to leanr about and apply object-oriented programming. My NCSU classes had explored OOP in Java and, although there are major differences between JS classes and Java classes, having this background was really helpful for writing the javaScript classes used in this game. My Udacity coursework has utilized JavaScript, HTML5, CSS, and frameworks like BootStrap, to build webpages and applications.Using OOP techniques like inheritance and delegation, I wrote several javaScript classes which creating countless instances of similarly functioning objects.  Click the image below to demo the game!
+                    <br> 
+                    <a href="frogger/index.html"><img class="img-responsive" src="images/froggerpic.png">   
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
