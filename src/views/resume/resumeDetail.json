@@ -1,0 +1,78 @@
+{
+	"bio": {
+
+		"name": "Arthur Vargas",
+		"role": "Developer",
+		"contacts":
+
+		{
+
+			"mobile": "336-416-7584",
+			"email": "ahvargas92@gmail.com",
+			"github": "https://github.com/ahvar",
+			"twitter": "@ahvargas",
+			"location": "Raleigh, NC"
+
+		},
+
+		"welcomeMessage": "Welcome to my online resume!",
+		"skills": ["HTML", "CSS", "JavaScript", "Java"],
+		"biopic": "http://www.dsicomedytheater.com/pix/people/Arthur_Vargas.jpg"
+	},
+
+	"education": {
+
+		"schools": [{
+			"name": "North Carolina State University",
+			"location": "Raleigh, NC",
+			"degree": "BS & BA",
+			"majors": ["English", "Biology"],
+			"dates": "2002 - 2006",
+			"url": "www.ncsu.edu"
+		}],
+		"onlineCourses": [{
+			"title": "JavaScript Basics",
+			"school": "Udacity",
+			"date": "01-2016",
+			"url": "www.udacity.com"
+		}, {
+			"title": "How to Use Git and Github",
+			"school": "Udacity",
+			"date": "12-2015",
+			"url": "www.udacity.com"
+		}, {
+			"title": "Intro to HTML and CSS",
+			"school": "Udacity",
+			"date": "12-2015",
+			"url": "www.udacity.com"
+		}]
+	},
+
+	"work": {
+		"jobs": [{
+			"employer": "Reichhold Inc.",
+			"title": "Sales Trainee",
+			"location": "Durham, NC",
+			"dates": "07/2007 - 10/2008",
+			"description": "A global supplier to the Composite & Coating Industry."
+		}, {
+			"employer": "Polyzen Inc.",
+			"title": "Inside Sales Representative",
+			"location": "Apex, NC",
+			"dates": "05/2009 - 08/2014",
+			"description": "A contract manufacturer of disposable medical devices."
+		}, {
+			"employer": "Robling Medical Inc.",
+			"title": "Inside Sales Representative",
+			"location": "Apex, NC",
+			"dates": "02/2015 - 09/2015",
+			"description": "A contract manufacturer of medical products."
+		}]
+	},
+	"projects": [{
+		"title": "Portfolio Website",
+		"dates": "2016",
+		"description": "A portfolio of development work",
+		"images": ["C:\\Users\\Arthur\\Pictures\\Screenshots"]
+	}]
+}
