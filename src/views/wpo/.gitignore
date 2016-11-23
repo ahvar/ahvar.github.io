@@ -1,0 +1,12 @@
+# This rule ignores the contents of the bin/ build output directory 
+bin/
+
+# This rule ignores temporary files that end with ~
+*~
+
+# dependency directories
+node_modules
+jspm_packages
+
+# Optional npm cache directory
+.npm

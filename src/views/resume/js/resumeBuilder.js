@@ -6,7 +6,7 @@
 "use strict";
 
 var	bio = {
-		"name": "Arthur Vargas",
+		"name": "Summary",
 		"role": "Developer",
 		"contacts": {
 			"mobile": "336-416-7584",
@@ -18,7 +18,7 @@ var	bio = {
 		},
 		"welcomeMessage": "Welcome to my online resume!",
 		"skills": ["HTML", "CSS", "JavaScript", "Java", "BootStrap", "OOP", "Git"],
-		"biopic": "../images/headshot3.jpg",
+		"biopic": "../../../img/hoodie-headshot-b&w.jpg",
 		"display": function() {
 			
 			//assign formatted HTML to formattedVariable
@@ -30,17 +30,17 @@ var	bio = {
 		
 			
 			//insert formatted HTML into index.html
-			$("#header").prepend(formattedheaderRole);
-			$("#header").prepend(formattedheaderName);
-			$("#header").append(formattedbioPic, formattedwelcomeMsg);
-			$("#header").append(HTMLskillsStart);
+			//$("#header").prepend(formattedheaderRole);
+			$("#header").append(formattedheaderName);
+			$("#header").append(formattedbioPic/*, formattedwelcomeMsg*/);
+			//$("#header").append(HTMLskillsStart);
 			
-			var i = 0;
-			for(var i = 0; i < bio.skills.length; i++) {
-				var formattedskills = HTMLskills.replace("%data%",bio.skills[i]);
-				$("#skills").append(formattedskills);
-				$("#footerContacts").append(formattedskills);	
-			}
+			//var i = 0;
+			//for(var i = 0; i < bio.skills.length; i++) {
+				//var formattedskills = HTMLskills.replace("%data%",bio.skills[i]);
+				//$("#skills").append(formattedskills);
+				//$("#footerContacts").append(formattedskills);	
+			//}
 			
 			
 			/* The for/each loop iterates through the contacts object and inserts the data

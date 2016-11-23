@@ -1,0 +1,63 @@
+•	We assume network roundtrip (propagation latency) to the server to cost 100ms and server response time = 100ms for HTML doc and 10ms for other files
+1.) Is a JavaScript file render blocking?  Explain.
+
+2.) What is a critical resource, the critical rendering path, and total number of critical bytes?
+
+3.) 
+
+A JS file on an html page will block domContentLoaded event until file.css is downloaded and parsed since the JS may query the CSSOM
+•	Some documents may be delivered in one roundtrip between client and server
+•	Critical Resource – resource that may block initial rendering of the page
+•	Critical Rendering Path – number of roundtrips, or total time required to fetch all of the critical resources
+•	Critical Bytes – the total amount of bytes required to render the page, sum of the transfer filesizes of all critical resources.
+•	A CSS file is a “render blocking” resource. A JS file is referred to as a “parser blocking” resource because the JS may query the CSS or HTML files, therefore, DOM construction (which requires both) needs to be complete before JS can run
+o	We can add the “async” attribute to the JS script tag to unblock the parser
+	Script is no longer parser blocking or part of the CRP
+	Because there are no other critical scripts, the CSS also does not need to block the domContentLoaded event
+	After domContentLoaded event fires, application logic can begin executing
+•	Figuring out the characteristics of your critical rendering path means being able to identify which are the critical resources, and also understanding how the browser will schedule their fetches.
+•	If a stylesheet modifies the DOM only in certain use cases (e.g. printing), can a media query be added to the critical resource to prevent it from blocking rendering of the page?
+o	Specify CSS resources within HTML document as early as possible so browser discovers <link> tag and dispatches request asap
+o	Avoid CSS import directive which enables one stylesheet to import rules from another stylesheet (additional resources are discovered only after stylesheet with import rule is received and parsed
+•	Deliver fastest possible time to first render
+o	Minimize number of critical resources
+o	Minimize critical bytes
+o	Minimize critical rendering path
+•	The number of resources, their bytesize, and critical path length are different factors which are related to each other.
+o	Analyze and characterize your critical path: number of resources, bytes, path length
+o	Minimize number of CR by eliminating them, deferring download, mark as async
+o	Optimize download order for CR (download all critical assets as early as possible to shorten critical path length (CPL))
+o	Optimize number of critical bytes to reduce download time (number of roundtrips)
+•	Parser blocking JS forces browser to wait for CSSOM and pauses construction of DOM
+o	If a JS resource can be “async” is it critical for first render? Can it be loaded after first render?
+•	Avoid synchronous server calls:
+o	Navigator.sendBeacon() method limits data sent by XMLHttpRequests in unload handlers. Send in pageHide handler
+o	New fetch() method provides easy way to asynchronously request data
+•	Most devices: 60 refresh/sec = 16.66ms  (due to other browser tasks all work needs to be completed inside 10ms).
+•	When frame rate drops, content “judders”, referred to as “jank”
+•	JS -> style calculations (which rules apply to which elements) -> layout -> painting (filling in pixels, multiple layers) -> compositing (draw to screen, layer order matters)
+o	Painting is draw calls and filling in pixels.  Filling in pixels is sometimes called “rasterize”
+•	If you change a layout property (with JS, CSS, web animation) the browser has to “reflow” the page
+o	https://csstriggers.com/
+•	A paint only property (background image, text color, shadows) does not require “reflow”
+•	Ideally you change compositor-only properties
+o	https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
+•	Use requestAnimationFrame for visual changes. All work is done at the start of the frame
+o	jQuery default animate behavior uses setTimeout. Patch
+	https://github.com/gnarf/jquery-requestAnimationFrame
+•	Can web workers be used for computational work (data manipulation, traversal, sorting, searching, etc.)
+o	https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
+•	Alternative to web workers, consider batching approach of segmenting larger task into microtasks (no longer than a few ms) and run inside requestAnimationFrame
+o	Progress/activity indicators: https://www.google.com/design/spec/components/progress-activity.html#
+•	What is the JS library, framework, file “frame tax”?
+•	Computed Style Calculation: changing the DOM will cause the browser to recalculate element styles and sometimes layout (“reflow”)
+o	Matching selectors. Roughly 50% of the time used to calculate the computed style for an element is used to match selectors. (the other half is used for constructing RenderStyle (computed style representation) from the matched rules.   https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit
+o	Reduce selector complexity
+o	The worst case cost of calculating the computed style of elements is the number of elements multiplied by the selector count (check each element at least once against every style)
+o	Smaller trees (DOM) with simpler rules are more efficiently processed than large trees or complex rules
+o	How can you use DevTools to check for long running frames ( > 60fps)?  If there are any long running events click on them to see a call stack
+o	BEM: https://en.bem.info/   is a great way to organize CSS!
+•	Changes to “geometric properties” such as widths, heights, left, or top all require layout. Layout is almost always scoped to the entire document.  Try to avoid triggering layout at all.
+•	The oldest CSS model allows us to position elements on screen relatively, absolutely, and by floating elements
+•	Forced synchronous layout
+•	

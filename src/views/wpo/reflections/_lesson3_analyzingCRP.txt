@@ -1,0 +1,9 @@
+1.) What does the preload scanner allow us to do?
+
+Preloaders are a way to overcome low network utilization while waiting for scripts to download/execute. When the browser is blocked on a script, a second lightweight parser scans the rest of the markup looking for other resources (e.g. stylesheets, scripts, images, etc.). The pre-loader starts requesting any resources so that by the time the html parser reaches them they may have already been downloaded.  These helps prevent critical resources from render blocking so the browser renders the page faster.
+
+Be aware that preloaders extract urls from markup and cannot execute JS so any urls in the file aren't accessed by the preloader.
+Read more about preloader here:  http://andydavies.me/blog/2013/10/22/how-the-browser-pre-loader-makes-pages-load-faster/
+A talk about prefetching: https://docs.google.com/presentation/d/18zlAdKAxnc51y_kj-6sWLmnjl6TLnaru_WH0LJTjP-o/present?slide=id.p19
+
+2.) 
