@@ -12,6 +12,21 @@ body {
     margin-bottom: 25px;
 }
 
+.eco-img, .todo-img, .help-desk-img, .univ-reg-img, .frogger-img, .wpo-img, .trading-card-img, .neighborhood-img, .resume-img {
+	-webkit-box-shadow: 6px 6px #666;
+    -moz-box-shadow: 6px 6px #666;
+    box-shadow: 6px 6px #666;
+	max-width: 100%;
+	min-height: 340px;
+}
+
+h6 {
+	font-family: Courier, monospace;
+	font-weight: bold;
+	padding: 1em 5em 1em 3em;
+}
+
 footer {
     margin: 50px 0;
 }
+

@@ -17,7 +17,7 @@
 
 		"welcomeMessage": "Welcome to my online resume!",
 		"skills": ["HTML", "CSS", "JavaScript", "Java"],
-		"biopic": "http://www.dsicomedytheater.com/pix/people/Arthur_Vargas.jpg"
+		"biopic": "img/headshot.jpg"
 	},
 
 	"education": {
@@ -73,6 +73,6 @@
 		"title": "Portfolio Website",
 		"dates": "2016",
 		"description": "A portfolio of development work",
-		"images": ["C:\\Users\\Arthur\\Pictures\\Screenshots"]
+		"images": ["img/todolist.png", "img/trading-card.png", "img/UC5.png", "img/univ-faculty"]
 	}]
 }

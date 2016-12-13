@@ -168,3 +168,10 @@ footer {
 p.copyright {
     margin: 15px 0 0;
 }
+
+.univ-faculty-img, .frogger-img, .skills-img, .resume-img {
+    -webkit-box-shadow: 6px 6px #666;
+    -moz-box-shadow: 6px 6px #666;
+    box-shadow: 6px 6px #666;
+}
+
