@@ -17,8 +17,8 @@ var	bio = {
 			"location": "Raleigh, NC"
 		},
 		"welcomeMessage": "Welcome to my online resume!",
-		"skills": ["HTML", "CSS", "JavaScript", "Java", "BootStrap", "OOP", "Git"],
-		"biopic": "../../../img/hoodie-headshot-b&w.jpg",
+		"skills": ["Java", "JavaScript", "HTML", "CSS", "Knockout", "Bootstrap", "Git"],
+		"biopic": "img/headshot.jpg",
 		"display": function() {
 			
 			//assign formatted HTML to formattedVariable
@@ -72,18 +72,23 @@ var education = {
 			"url": "https://www.ncsu.edu/",
 			"name": "North Carolina State University",
 			"location": "Raleigh, NC",
-			"degree": "BS & BA",
-			"majors": ["English", "Biology"],
-			"dates": "2006"
-			}, {
-			"url": "https://www.ncsu.edu/",
-			"name": "North Carolina State University",
-			"location": "Raleigh, NC",
 			"degree": "Computer Programming Certificate",
 			"majors": ["NA"],
 			"dates": "2018"
-		}],
+		},{
+			"url": "https://www.ncsu.edu/",
+			"name": "North Carolina State University",
+			"location": "Raleigh, NC",
+			"degree": "BS & BA",
+			"majors": ["English", "Biology"],
+			"dates": "2006"
+			}],
 		"onlineCourses": [{
+			"url": "http://engineeringonline.ncsu.edu/onlinecourses/coursehomepages/SPR-2013/CSC216.html",
+			"title": "CSC 216 - Programming Concepts in Java",
+			"school": "North Carolina State University",
+			"date": "2017"
+		},{
 			"url": "https://www.udacity.com/course/javascript-basics--ud804",
 			"title": "JavaScript Basics",
 			"school": "Udacity",
