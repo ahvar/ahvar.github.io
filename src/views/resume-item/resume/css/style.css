@@ -157,6 +157,11 @@ ul {
   display: none;
 }
 
+.project-img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
 img {
   padding: 10px;
 }
@@ -212,5 +217,5 @@ span {
   .biopic {
     display: block;
   }
-}
+
 

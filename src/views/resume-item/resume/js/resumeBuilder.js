@@ -57,7 +57,7 @@ var	bio = {
 					formattedEmail = HTMLemail.replace("%data%",bio.contacts.email);
 					formattedTwitter = HTMLtwitter.replace("%data%",bio.contacts.twitter);
 					formattedGithub = HTMLgithub.replace("%data%",bio.contacts.github);
-					formattedBlog = HTMLblog.replace("%data%",bio.contacts.blog);
+					//formattedBlog = HTMLblog.replace("%data%",bio.contacts.blog);
 					formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);				
 			});
 			
@@ -76,6 +76,13 @@ var education = {
 			"majors": ["NA"],
 			"dates": "2018"
 		},{
+			"url": "www.udacity.com",
+			"name": "Udacity",
+			"location": "virtual",
+			"degree": "Frontend Developer Nanodegree",
+			"majors": ["NA"],
+			"dates": "2017"
+		},{
 			"url": "https://www.ncsu.edu/",
 			"name": "North Carolina State University",
 			"location": "Raleigh, NC",
@@ -85,24 +92,39 @@ var education = {
 			}],
 		"onlineCourses": [{
 			"url": "http://engineeringonline.ncsu.edu/onlinecourses/coursehomepages/SPR-2013/CSC216.html",
-			"title": "CSC 216 - Programming Concepts in Java",
+			"title": "CSC216 - Programming Concepts - Java",
 			"school": "North Carolina State University",
-			"date": "2017"
+			"date": "Fall / 2016"
+		},{
+			"url": "http://engineeringonline.ncsu.edu/onlinecourses/cpc_marketing/CSC116.html",
+			"title": "CSC116 - Introduction to Computing - Java",
+			"school": "North Carolina State University",
+			"date": "Summer / 2015"
+		},{
+			"url": "https://www.waketech.edu/student-services/catalog/course-descriptions?cat_name=CSC",
+			"title": "CS 151 - JAVA Programming",
+			"school": "Wake Technical Community College",
+			"date": "2015"
+		},{
+			"url": "http://www.stat.ncsu.edu/courses/course.php?id=ST513",
+			"title": "ST 531 - Statistics for Management",
+			"school": "North Carolina State University",
+			"date": "2014"
 		},{
 			"url": "https://www.udacity.com/course/javascript-basics--ud804",
 			"title": "JavaScript Basics",
 			"school": "Udacity",
-			"date": "2016"
+			"date": "Spring / 2016"
 		}, {
-			"url": "whttps://www.udacity.com/course/how-to-use-git-and-github--ud775",
+			"url": "https://www.udacity.com/course/how-to-use-git-and-github--ud775",
 			"title": "How to Use Git and Github",
 			"school": "Udacity",
-			"date": "2015"
+			"date": "Summer / 2015"
 		}, {
 			"url": "https://www.udacity.com/course/intro-to-html-and-css--ud304",
 			"title": "Intro to HTML and CSS",
 			"school": "Udacity",
-			"date": "2015"
+			"date": "Spring 2016"
 		}, {
 			"url": "https://www.udacity.com/course/intro-to-jquery--ud245",
 			"title": "Intro to jQuery",
@@ -117,21 +139,6 @@ var education = {
 			"url": "https://www.udacity.com/course/html5-canvas--ud292",
 			"title": "HTML5 Canvas",
 			"school": "Udacity",
-			"date": "2016"
-		}, {
-			"url": "http://www.stat.ncsu.edu/courses/course.php?id=ST513",
-			"title": "ST 531: Statistics for Management",
-			"school": "North Carolina State University",
-			"date": "2014"
-		}, {
-			"url": "https://www.waketech.edu/student-services/catalog/course-descriptions?cat_name=CSC",
-			"title": "CS 151: JAVA Programming",
-			"school": "Wake Technical Community College",
-			"date": "2015"
-		}, {
-			"url": "https://courses.ncsu.edu/csc216/lec/601/",
-			"title": "CS 213: Programming Concepts",
-			"school": "North Carolina State University",
 			"date": "2016"
 		}],
 		"display": function() {
@@ -203,18 +210,30 @@ var projects = {
 		"projects": [{
 
                 	"title": "Portfolio Website",
-                	"url": "../index.html",
+                	"url": "http://ahvar.github.io/",
                 	"dates": "2016",
                 	"description": "A portfolio of development work",
-                	"images": ["../images/pfPhoto.png"]
+                	"images": ["../../../../img/welcome-page-min.png", "../../../../img/portfolio-min.png"]
                 	
 				}, {
 					"title": "Frogger Game",
 					"url": "../frogger/index.html",
 					"dates": "2016",
 					"description": "A clone of the classic arcade game 'Frogger'",
-					"images": ["../images/froggerpic.png"]
-				}],		
+					"images": ["../../../../img/froggerpic.png"]
+				},{
+					"title": "Help Desk",
+					"url": "https://github.com/ahvar/help-desk.git",
+					"dates": "Fall 2016",
+					"description": "A Tracking System for an IT department help desk",
+					"images": ["../../../../img/help-desk-min.gif","../../../../img/help-desk-min.jpg"]
+				},{
+					"title": "University Schedule",
+					"url": "https://github.com/ahvar/UniversityScheduler.git",
+					"dates": "Fall 2016",
+					"description": "A University Registration System",
+					"images": ["../../../../img/univ-faculty-min.png"]
+				}],
 		"display" : function() {
 						for(var i = 0; i < projects.projects.length; i++) {
 							$("#projects").append(HTMLprojectStart);
