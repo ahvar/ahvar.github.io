@@ -232,7 +232,7 @@ var projects = {
 					"url": "https://github.com/ahvar/UniversityScheduler.git",
 					"dates": "Fall 2016",
 					"description": "A University Registration System",
-					"images": ["../../../../img/univ-faculty-min.png"]
+					"images": ["../../../../img/univ-faculty-min.PNG"]
 				}],
 		"display" : function() {
 						for(var i = 0; i < projects.projects.length; i++) {
