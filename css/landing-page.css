@@ -83,6 +83,7 @@ h6 {
     .intro-divider {
         width: 100%;
     }
+   
 }
 
 .network-name {
@@ -174,6 +175,4 @@ p.copyright {
     -moz-box-shadow: 6px 6px #666;
     box-shadow: 6px 6px #666;
 }
-.resume-img, .skills-img {
-    min-width: 500px;
-}
+
