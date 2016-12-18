@@ -12,19 +12,15 @@ body {
 }
 
 .portfolio-item {
-	-webkit-box-shadow: 6px 6px #666;
-    -moz-box-shadow: 6px 6px #666;
-    box-shadow: 6px 6px #666;
-    min-width: 240px;
-    min-height: 300px;
+	-webkit-box-shadow: 4px 4px #666;
+    -moz-box-shadow: 4px 4px #666;
+    box-shadow: 4px 4px #666;
     margin-bottom: 25px;
 }
 
-.col-sm-3, .col-xs-6 {
+h5 {
 	font-family: "Times New Roman", Times, serif;
 	font-weight: bold;
-	font-size: 14px;
-	padding: 1em 5em 1em 3em;
 }
 
 footer {
