@@ -3,6 +3,14 @@ body {
     padding-top: 70px; 
 }
 
+.item-img {
+	-webkit-box-shadow: 6px 6px #666;
+    -moz-box-shadow: 6px 6px #666;
+    box-shadow: 6px 6px #666;
+    min-width: 700px;
+    max-height: 800px;
+}
+
 .portfolio-item {
 	-webkit-box-shadow: 6px 6px #666;
     -moz-box-shadow: 6px 6px #666;
