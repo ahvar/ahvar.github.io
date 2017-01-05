@@ -144,7 +144,14 @@ var education = {
 			"title": "HTML5 Canvas",
 			"school": "Udacity",
 			"date": "2016"
-		}],
+		},{
+			"url": "https://www.udacity.com/course/website-performance-optimization--ud884",
+			"title": "The Critical Rendering Path",
+			"school": "Udacity",
+			"date": "2016"
+		}
+
+		],
 		"display": function() {
 			
 			$("#education").append(HTMLschoolStart);
