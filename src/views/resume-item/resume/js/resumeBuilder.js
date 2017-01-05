@@ -6,7 +6,7 @@
 "use strict";
 
 var	bio = {
-		"name": "Summary",
+		"name": "",
 		"role": "Developer",
 		"contacts": {
 			"mobile": "336-416-7584",
