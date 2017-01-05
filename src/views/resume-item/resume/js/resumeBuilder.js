@@ -242,7 +242,7 @@ var projects = {
 					"url": "https://github.com/ahvar/ecosystem-simulator.git",
 					"dates": "Fall 2016",
 					"description": "Models Animal Behavior in an Ecosystem",
-					"images": ["../../../../img/p1-pic.PNG"]
+					"images": ["../../../../img/p1-pic.png"]
 				},{
 					"title": "Website Performance Optimization",
 					"url": "https://github.com/ahvar/frontend-nanodegree-WPO.git",
@@ -261,11 +261,7 @@ var projects = {
 					"dates": "Summer 2016",
 					"description": "An interactive map of tourist spots in Michoacan, MX",
 					"images": ["../../../../img/neighborhood-map.png"]
-				}
-
-
-
-				],
+				}],
 		"display" : function() {
 						for(var i = 0; i < projects.projects.length; i++) {
 							$("#projects").append(HTMLprojectStart);
