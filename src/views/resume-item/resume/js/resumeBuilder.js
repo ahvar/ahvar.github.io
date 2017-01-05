@@ -248,19 +248,19 @@ var projects = {
 					"url": "https://github.com/ahvar/frontend-nanodegree-WPO.git",
 					"dates": "Summer 2016",
 					"description": "Increase the speed and performance of a modern website",
-					"images": ["../../../../img/wpo-item.PNG"]
+					"images": ["../../../../img/wpo-item.png"]
 				},{
 					"title": "Animal Trading Card",
 					"url": "https://github.com/ahvar/frontend-nanodegree-trading-cards.git",
 					"dates": "Summer 2016",
 					"description": "Mark-up and style a trading card design",
-					"images": ["../../../../img/wpo-item.PNG"]
+					"images": ["../../../../img/trading-card.png"]
 				},{
 					"title": "Neighborhood Map",
 					"url": "https://github.com/ahvar/udacity-fend-neighborhood-map.git",
 					"dates": "Summer 2016",
 					"description": "An interactive map of tourist spots in Michoacan, MX",
-					"images": ["../../../../img/neighborhood-map.PNG"]
+					"images": ["../../../../img/neighborhood-map.png"]
 				}
 
 
