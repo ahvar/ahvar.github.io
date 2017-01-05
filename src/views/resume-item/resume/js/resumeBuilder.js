@@ -90,7 +90,11 @@ var education = {
 			"majors": ["English", "Biology"],
 			"dates": "2006"
 			}],
-		"onlineCourses": [{
+		"onlineCourses": [{"url": "https://engineeringonline.ncsu.edu/onlinecourses/coursemarketing/SPR-2014/CSC230.html",
+			"title": "CSC230 - C and Software Tools - Java",
+			"school": "North Carolina State University",
+			"date": "Sprint / 2017"
+		},{
 			"url": "http://engineeringonline.ncsu.edu/onlinecourses/coursehomepages/SPR-2013/CSC216.html",
 			"title": "CSC216 - Programming Concepts - Java",
 			"school": "North Carolina State University",
@@ -233,7 +237,35 @@ var projects = {
 					"dates": "Fall 2016",
 					"description": "A University Registration System",
 					"images": ["../../../../img/univ-faculty-min.PNG"]
-				}],
+				},{
+					"title": "Ecosystem Simulator",
+					"url": "https://github.com/ahvar/ecosystem-simulator.git",
+					"dates": "Fall 2016",
+					"description": "Models Animal Behavior in an Ecosystem",
+					"images": ["../../../../img/p1-pic.PNG"]
+				},{
+					"title": "Website Performance Optimization",
+					"url": "https://github.com/ahvar/frontend-nanodegree-WPO.git",
+					"dates": "Summer 2016",
+					"description": "Increase the speed and performance of a modern website",
+					"images": ["../../../../img/wpo-item.PNG"]
+				},{
+					"title": "Animal Trading Card",
+					"url": "https://github.com/ahvar/frontend-nanodegree-trading-cards.git",
+					"dates": "Summer 2016",
+					"description": "Mark-up and style a trading card design",
+					"images": ["../../../../img/wpo-item.PNG"]
+				},{
+					"title": "Neighborhood Map",
+					"url": "https://github.com/ahvar/udacity-fend-neighborhood-map.git",
+					"dates": "Summer 2016",
+					"description": "An interactive map of tourist spots in Michoacan, MX",
+					"images": ["../../../../img/neighborhood-map.PNG"]
+				}
+
+
+
+				],
 		"display" : function() {
 						for(var i = 0; i < projects.projects.length; i++) {
 							$("#projects").append(HTMLprojectStart);
