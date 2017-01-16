@@ -279,7 +279,7 @@ var ViewModel = function() {
 
 			// call to get initial information
 			$.ajax({
-				url: 'https://api.foursquare.com/v2/venues/search?ll='+place.lat()+','+place.lng()+'&intent=match&name='+place.name()+'&client_id=5ZPHOZSSOIEHWPYI4U5BBM42EXBJOYQIY1LBR1RZ3LIGNQG1&client_secret=HRH0UQDDMCO2JKC2NHJMJYRU2N05SQ4TGDHFHGZEQODZBX4S&v=20150326'
+				url: 'https://api.foursquare.com/v2/venues/search?ll='+place.lat()+','+place.lng()+'&intent=match&name='+place.name()+'&client_id=PNBRN4E4DHEVQYRLIAH4V5J5F34NXPJZR5KXKZE5KPRN5L2D&client_secret=KBTAM03M11ENMURLL1T3QP1IU1YGCNTNUH1GPYN2RBXDCHA2&v=20150326'
 			})
 			.done(function(data){
 				var venue = data.response.venues[0];
@@ -296,7 +296,7 @@ var ViewModel = function() {
 
 				// use id to get photo
 				$.ajax({
-					url: 'https://api.foursquare.com/v2/venues/'+place.id()+'/photos?client_id=5ZPHOZSSOIEHWPYI4U5BBM42EXBJOYQIY1LBR1RZ3LIGNQG1&client_secret=HRH0UQDDMCO2JKC2NHJMJYRU2N05SQ4TGDHFHGZEQODZBX4S&v=20150326'
+					url: 'https://api.foursquare.com/v2/venues/'+place.id()+'/photos?client_id=PNBRN4E4DHEVQYRLIAH4V5J5F34NXPJZR5KXKZE5KPRN5L2D&client_secret=KBTAM03M11ENMURLL1T3QP1IU1YGCNTNUH1GPYN2RBXDCHA2&v=20150326'
 				})
 				.done(function(data){
 					// set first photo url as the place photo property
