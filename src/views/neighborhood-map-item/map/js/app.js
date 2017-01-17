@@ -68,15 +68,7 @@ var places = [
 		info: 'Romance Alley',
 		tags: ['history', 'streets', 'historic district']
 	},
-	// template for future places
-	/*{
-		name: '',
-		address: '',
-		lat: ,
-		lng: ,
-		info: '',
-		tags: ['']
-	}*/
+
 ];
 
 // *******************************
