@@ -5,44 +5,20 @@
 // *******************************
 var places = [
 	{
-		name: 'Acueducto de Morelia',
-		address: 'Avenue Acueducto 1464, Chapultepec Nte. 58260 Morelia, Mich., Mexico',
-		lat: 19.699203,
-		lng: -101.15678,
-		info: 'Built between 1785 and 1788',
-		tags: ['aqueduct', 'history', 'monuments'],
+		name: 'Coffee Tree',
+		address: 'Av Enrique Ramirez y Av Camelinas',
+		lat: 19.6889285,
+		lng: -101.1581993,
+		info: 'Coffee house',
+		tags: ['coffee', 'refreshment', 'Morelia']
 	},
 	{
-		name: 'Catedral de Morelia',
-		address: 'Avenue Francisco I. Madero Pte S/N, Centro, 58000 Morelia, Mich., Mexico',
-		lat: 19.705950,
-		lng: -101.194982,
-		info: 'Cathedral of Morelia',
-		tags: ['cathedral', 'history', 'church', 'catholic']
-	},
-	{
-		name: 'Estadio de Morelos',
-		address: 'Libramiento Poniente s/n, Leandro Valle, 58147 Morelia, Mich., Mexico',
-		lat: 29.192834,
-		lng: -108.150102,
-		info: 'Futbol Stadium',
-		tags: ['futbol', 'soccer', 'sports', 'deportes']
-	},
-	{
-		name: 'Monumento ecuestre de Jose Maria Morelos',
-		address: 'Janitzio, Morelia, Mich., Mexico',
-		lat: 19.0786,
-		lng: -102.3554,
-		info: 'A monument to Jose Maria Morelos',
-		tags: ['Jose Maria Morelos', 'history', 'monument']
-	},
-	{
-		name: 'Antiguo Palacio de Justicia',
-		address: 'Portal Allende 267, Centro Historico, Morelia, Mich., Mexico',
-		lat: 25.7349,
-		lng: -100.3094,
-		info: 'Government Building',
-		tags: ['government', 'historic']
+		name: 'Sherbrooke Coffee & Tea Suc. Altozano',
+		address: 'Juan Pablo II',
+		lat: 19.67581432,
+		lng: -101.1824002,
+		info: 'Coffee Clouds',
+		tags: ['coffee', 'clouds', 'morelia']
 	},
 	{
 		name: 'Bosque Cuahutemoc',
@@ -53,21 +29,21 @@ var places = [
 		tags: ['statues', 'history']
 	},
 	{
-		name: 'Jardin de Las Rosas',
-		address: 'Calle de Santiago Tapia, Centro Historico, 58000 Morelia, Mich., Mexico',
-		lat: 19.70462,
-		lng: -101.194481,
-		info: 'Garden of roses',
-		tags: ['garden', 'park', 'walking', 'flowers']
+		name: 'Hotel Boutique Casa Madero',
+		address: 'Av Francisco 1. Madero Ote 137, Centro, Centro Historico, 58000 Morelia, Mich., Mexico',
+		lat: 19.703539,
+		lng: -101.181069,
+		info: '5-Star hotel in Morelia historic district',
+		tags: ['hotel', 'historic', 'sleep']
 	},
 	{
-		name: 'El Callejon Del Romance',
-		address: '58000, Del Romance 48, Centro Historico, Morelia, Mich., Mexico',
-		lat: 19.703864,
-		lng: -101.181860,
-		info: 'Romance Alley',
-		tags: ['history', 'streets', 'historic district']
-	},
+		name: 'Hotel de la soledad',
+		address: 'Ignacio Zaragoza 90, Centro, 58000 Morelia, Mich., Mexico',
+		lat: 19.703658,
+		lng: -101.192996,
+		info: 'Five star hotel in Morelia, Michoacan',
+		tags: ['hotel', 'morelia']
+	}
 
 ];
 
@@ -271,10 +247,12 @@ var ViewModel = function() {
 
 			// call to get initial information
 			$.ajax({
-				url: 'https://api.foursquare.com/v2/venues/search?ll='+place.lat()+','+place.lng()+'&intent=match&name='+place.name()+'&client_id=PNBRN4E4DHEVQYRLIAH4V5J5F34NXPJZR5KXKZE5KPRN5L2D&client_secret=KBTAM03M11ENMURLL1T3QP1IU1YGCNTNUH1GPYN2RBXDCHA2&v=20150326'
+				//url:'https://api.foursquare.com/v2/venues/search?v=20161016&ll='+place.lat()+'%2C%20'+place.lng()+'&query=coffee&intent=checkin&client_id=PNBRN4E4DHEVQYRLIAH4V5J5F34NXPJZR5KXKZE5KPRN5L2D&client_secret=KBTAM03M11ENMURLL1T3QP1IU1YGCNTNUH1GPYN2RBXDCHA2'
+				url: 'https://api.foursquare.com/v2/venues/search?ll='+place.lat()+','+place.lng()+'&intent=match&name='+place.name()+'&client_id=PNBRN4E4DHEVQYRLIAH4V5J5F34NXPJZR5KXKZE5KPRN5L2D&client_secret=KBTAM03M11ENMURLL1T3QP1IU1YGCNTNUH1GPYN2RBXDCHA2&v=20161016'			
 			})
 			.done(function(data){
 				var venue = data.response.venues[0];
+				console.log(venue); 
 
 				//set fetched info as properties of Place object
 				place.id = ko.observable(venue.id);
@@ -282,13 +260,14 @@ var ViewModel = function() {
 				if (venue.hasOwnProperty('url')) {
 					place.url = ko.observable(venue.url);
 				}
-				if (venue.hasOwnProperty('contact') && venue.contact.hasOwnProperty('formattedPhone')) {
-					place.phone = ko.observable(venue.contact.formattedPhone);
-				}
+				//if (venue.hasOwnProperty('contact') && venue.contact.hasOwnProperty('formattedPhone')) {
+				//	place.phone = ko.observable(venue.contact.formattedPhone);
+				//}
 
 				// use id to get photo
 				$.ajax({
-					url: 'https://api.foursquare.com/v2/venues/'+place.id()+'/photos?client_id=PNBRN4E4DHEVQYRLIAH4V5J5F34NXPJZR5KXKZE5KPRN5L2D&client_secret=KBTAM03M11ENMURLL1T3QP1IU1YGCNTNUH1GPYN2RBXDCHA2&v=20150326'
+					//url:'https://api.foursquare.com/v2/venues/search?v=20161016&ll='+place.id()+'/photos?client_id=PNBRN4E4DHEVQYRLIAH4V5J5F34NXPJZR5KXKZE5KPRN5L2D&client_secret=KBTAM03M11ENMURLL1T3QP1IU1YGCNTNUH1GPYN2RBXDCHA2'
+					url: 'https://api.foursquare.com/v2/venues/'+place.id()+'/photos?client_id=PNBRN4E4DHEVQYRLIAH4V5J5F34NXPJZR5KXKZE5KPRN5L2D&client_secret=KBTAM03M11ENMURLL1T3QP1IU1YGCNTNUH1GPYN2RBXDCHA2&v=20161016'
 				})
 				.done(function(data){
 					// set first photo url as the place photo property
