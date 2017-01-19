@@ -3,7 +3,7 @@
 // *******************************
 // *         DATA MODEL          *
 // *******************************
-var places = [
+var locations = [
 	{
 		name: 'Coffee Tree',
 		address: 'Av Enrique Ramirez y Av Camelinas',
@@ -126,7 +126,7 @@ var ViewModel = function() {
 		self.placeList = ko.observableArray([]);
 
 		// loop through places array and convert to ko object
-		places.forEach(function(place) {
+		locations.forEach(function(place) {
 			self.placeList.push(new Place(place, self));
 
 			// loop through tags for each place and add to self.filters
