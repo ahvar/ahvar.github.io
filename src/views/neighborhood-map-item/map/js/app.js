@@ -48,7 +48,7 @@ var locations = [
 ];
 
 // *******************************
-// *         GOOGLE MAPS         *
+// *         MAPS                *
 // *******************************
 var gMap = {
 	map: {},
@@ -66,7 +66,7 @@ var gMap = {
 };
 
 // *******************************
-// *         PLACE OBJECT        *
+// *         LOCATION            *
 // *******************************
 var Place = function(data, parent) {
 	// info from provided data model
@@ -97,7 +97,7 @@ var Place = function(data, parent) {
 };
 
 // *******************************
-// *        FILTER OBJECT        *
+// *        FILTER               *
 // *******************************
 var Filter = function(data) {
 	this.name = ko.observable(data.name);
@@ -135,8 +135,8 @@ var ViewModel = function() {
 				if (tempTagArr.indexOf(tag) < 0) {
 					tempTagArr.push(tag);
 				}
-			});// end tag loop
-		});// end place loop
+			});
+		});
 
 		// loop through tags and make filter objects from them
 		tempTagArr.forEach(function(tag){
@@ -145,11 +145,10 @@ var ViewModel = function() {
 
 		 
 
-		// set filters based on temporary array
-		// this has performance benefits over pushing items one at a time
+		
 		self.filters = ko.observableArray(tempFilterArr);
 
-		// array of filters currently applied
+	
 		self.currentFilters = ko.computed(function() {
 			var tempCurrentFilters = [];
 
