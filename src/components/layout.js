@@ -2,50 +2,96 @@
  * Layout component that queries for data
  * with Gatsby's useStaticQuery component
  *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
  */
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import styled, { ThemeProvider } from 'styled-components';
+import { Head, Loader, Nav, Social, Email, Footer } from '@components';
+import { GlobalStyle, theme } from '@styles';
 
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+//  import * as React from "react"
+//  import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+const StyledContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+const Layout = ({ children, location }) => {
+  const isHome = location.pathname === '/';
+  const [isLoading, setIsLoading] = useState(isHome);
+
+  // Sets target="_blank" rel="noopener noreferrer" on external links
+  const handleExternalLinks = () => {
+    const allLinks = Array.from(document.querySelectorAll('a'));
+    if (allLinks.length > 0) {
+      allLinks.forEach(link => {
+        if (link.host !== window.location.host) {
+          link.setAttribute('rel', 'noopener noreferrer');
+          link.setAttribute('target', '_blank');
         }
-      }
+      });
     }
-  `)
+  };
+
+  useEffect(() => {
+    if (isLoading) {
+      return;
+    }
+
+    if (location.hash) {
+      const id = location.hash.substring(1); // location.hash without the '#'
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView();
+          el.focus();
+        }
+      }, 0);
+    }
+
+    handleExternalLinks();
+  }, [isLoading]);
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+      <Head />
+
+      <div id="root">
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+
+          <a className="skip-to-content" href="#content">
+            Skip to Content
+          </a>
+
+          {isLoading && isHome ? (
+            <Loader finishLoading={() => setIsLoading(false)} />
+          ) : (
+            <StyledContent>
+              <Nav isHome={isHome} />
+              <Social isHome={isHome} />
+              <Email isHome={isHome} />
+
+              <div id="content">
+                {children}
+                <Footer />
+              </div>
+            </StyledContent>
+          )}
+        </ThemeProvider>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequired,
+};
+
+export default Layout;

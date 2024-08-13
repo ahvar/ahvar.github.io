@@ -5,17 +5,36 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "animejs": "^3.2.2",
+    "babel-plugin-styled-components": "^2.1.4",
     "gatsby": "^5.13.5",
+    "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-google-analytics": "^5.13.1",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
+    "gatsby-plugin-offline": "^6.13.2",
+    "gatsby-plugin-react-helmet": "^6.13.1",
+    "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-plugin-sitemap": "^6.13.1",
+    "gatsby-plugin-styled-components": "^6.13.1",
+    "gatsby-remark-code-titles": "^1.1.0",
+    "gatsby-remark-external-links": "^0.0.4",
+    "gatsby-remark-images": "^7.13.1",
+    "gatsby-remark-prismjs": "^7.13.1",
     "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-transition-group": "^4.4.5",
+    "scrollreveal": "^4.0.9",
+    "styled-components": "^6.1.12",
+    "yarm": "^0.4.0",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
-    "prettier": "^2.8.8",
     "bower": "^1.8.0",
     "grunt": "^1.0.1",
     "grunt-contrib-concat": "^1.0.1",
@@ -24,7 +43,8 @@
     "grunt-inline": "^0.1.9",
     "html-minifier-terser": "^7.2.0",
     "http-server": "^14.1.1",
-    "ngrok": "^5.0.0-beta.2"
+    "ngrok": "^5.0.0-beta.2",
+    "prettier": "^2.8.8"
   },
   "keywords": [
     "gatsby"
