@@ -13,9 +13,9 @@ module.exports = {
     title: 'Arthur Vargas',
     author: 'Arthur Vargas',
     description:
-      'Arthur Vargas is a software engineer specializing in Next-Gen Sequencing data pipelines.',
+      'Software engineer specializing in Next-Gen Sequencing data pipelines.',
     siteUrl: 'https://arthurvargas.dev', // No trailing slash allowed!
-    image: '/welcome.png', // Path to your image you placed in the 'static' folder
+    image: './static/welcome.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@ahvargas',
   },
   plugins: [

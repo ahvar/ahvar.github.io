@@ -5,44 +5,35 @@ import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
 
 const StyledHeroSection = styled.section`
-  ${({ theme }) => theme.mixins.flexCenter};
-  flex-direction: column;
-  align-items: flex-start;
-  min-height: 100vh;
-  height: 100vh;
-  padding: 0;
-
-  @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
-    height: auto;
-    padding-top: var(--nav-height);
+  @media (max-width: 480px) {
+    margin: 0 0 15px 0;
   }
 
-  h1 {
-    margin: 0 0 30px 4px;
-    color: var(--green);
-    font-family: var(--font-mono);
-    font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
-    font-weight: 400;
-
-    @media (max-width: 480px) {
-      margin: 0 0 20px 2px;
-    }
+  h2 {
+    margin: 0 0 20px 0;
+    color: #ffffff; /* Change color for h2 */
+    font-size: clamp(var(--fz-lg), 5vw, var(--fz-xl));
+    font-weight: 700; /* Make the font bold */
   }
 
   h3 {
     margin-top: 5px;
-    color: var(--slate);
-    line-height: 0.9;
+    color: #a8a8a8; /* Change color for h3 */
+    line-height: 1.1;
+  }
+
+  .no-background {
+    background: none; /* Add your desired styles here */
   }
 
   p {
     margin: 20px 0 0;
     max-width: 540px;
+    text-align: center; /* Center align text */
   }
 
   .email-link {
     ${({ theme }) => theme.mixins.bigButton};
-    margin-top: 50px;
   }
 `;
 
@@ -55,22 +46,24 @@ const Hero = () => {
             return;
         }
 
-        const timeout = setTimeout(() => setIsMounted(true), navDelay);
-        return () => clearTimeout(timeout);
-    }, []);
+        const timeout = setTimeout(() => {
+            setIsMounted(true);
+            console.log('Component mounted, isMounted set to true');
+        }, navDelay);
 
-    const one = <h1>Hi, my name is</h1>;
-    const two = <h2 className="big-heading">Arthur Vargas.</h2>;
-    const three = <h3 className="big-heading">I build Next-Gen Sequencing data pipelines.</h3>;
+        return () => clearTimeout(timeout);
+    }, [prefersReducedMotion, navDelay]);
+
+    const one = <h1 className="main-heading"> </h1>;
+    const two = <h2 className="big-heading"></h2>;
+    const three = <h3 className="big-heading no-background">Arthur Vargas</h3>;
     const four = (
         <>
             <p>
-                I’m a software engineer in bioinformatics (and occasionally quantitative finance).
-                Currently, I'm looking for new opportunities. Projects at{' '}
+                Building Next-Gen Sequencing Data Pipelines.
                 <a href="https://github.com/ahvar" target="_blank" rel="noreferrer">
                     My Github
                 </a>
-                .
             </p>
         </>
     );
@@ -91,7 +84,7 @@ const Hero = () => {
             {prefersReducedMotion ? (
                 <>
                     {items.map((item, i) => (
-                        <div key={i}>{item}</div>
+                        <div key={i} className="no-background">{item}</div>
                     ))}
                 </>
             ) : (

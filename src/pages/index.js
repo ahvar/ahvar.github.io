@@ -10,12 +10,14 @@ import Jobs from '@components/sections/jobs';
 import Featured from '@components/sections/featured';
 import Projects from '@components/sections/projects';
 import Contact from '@components/sections/contact';
+import IconLoader from '../components/icons/loader';
 
 console.log("Layout, Hero, About, Jobs, Featured, Projects, Contact");
 console.log(Layout, Hero, About, Jobs, Featured, Projects, Contact);
 
 const StyledMainContainer = styled.main`
   counter-reset: section;
+  background-color: black; // or use 'grey' for grey background
 `;
 
 const IndexPage = ({ location }) => (
