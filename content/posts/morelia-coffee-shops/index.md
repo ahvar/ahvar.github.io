@@ -1,17 +1,17 @@
 ---
-title: Accessible Clickable Cards
-description: Clickable cards with multiple child links
-date: 2021-04-21
+title: Morelia Coffee Shops
+description: A google map with coffee shops in Morelia, Michoacán, México.
+date: 2018-04-21
 draft: false
-slug: /pensieve/clickable-cards
+slug: /other/morelia-coffee-shops
 tags:
-  - Accessibility
+  - Google Maps
   - CSS
 ---
 
-[Codepen Demo](https://codepen.io/bchiang7/pen/xxRBvgd?editors=1100)
+[Map Demo](https://arthurvargas.dev/src/views/neighborhood-map-item/map/index.html)
 
-Card layout where the card itself isn't an anchor link, but the whole card is clickable (with a `:before` pseudo element on the main `<a>`). Links inside of the card are still clickable.
+A google map with a list of coffee shops that can be identified on a map of Morelia, Michoacan, Mexico.
 
 ## CSS
 

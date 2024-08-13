@@ -36,3 +36,13 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     },
   });
 };
+
+// gatsby-node.js
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  createTypes(`
+    type MarkdownRemarkFrontmatter {
+      cta: String
+    }
+  `);
+};
