@@ -153,18 +153,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-alias-imports`,
-      options: {
-        alias: {
-          "@components": "src/components",
-          "@config": "src/config",
-          "@hooks": "src/hooks",
-          "@utils": "src/utils",
-        },
-        extensions: [".js", ".jsx"],
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -174,8 +162,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Arthur Vargas`,
+        short_name: `Arthur Vargas`,
         start_url: `/`,
         background_color: `#663399`,
         // This will impact how browsers show your PWA/website
