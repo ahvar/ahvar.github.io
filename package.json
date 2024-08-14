@@ -6,7 +6,7 @@
   "author": "Arthur Vargas <ahvargas92@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://arthurvargas.dev"
+    "url": "https://github.com/ahvar/ahvar.github.io"
   },
   "dependencies": {
     "animejs": "^3.2.2",
@@ -74,7 +74,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "deploy": "gatsby build && gh-pages -d public",
+    "deploy": "gatsby build && master -d public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "gatsby develop",
