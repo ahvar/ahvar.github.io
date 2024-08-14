@@ -3,7 +3,7 @@ title: Morelia Coffee Shops
 description: A google map with coffee shops in Morelia, Michoacán, México.
 date: 2018-04-21
 draft: false
-slug: /other/morelia-coffee-shops
+slug: /pensieve/morelia-coffee-shops
 tags:
   - Google Maps
   - CSS
