@@ -129,22 +129,16 @@ const About = () => {
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
-      <h2 className="numbered-heading">About Me</h2>
+      <h2 className="heading">About Me</h2>
 
       <div className="inner">
         <StyledText>
           <div>
             <p>
-              Hi! I'm Arthur, a technologist interested in bioinformatics and quantitative finance.
-              From 2018 - 2024, I worked as software engineer at the Translational Science and
-              Innovation Laboratory (TSAIL) and Clinical Genomics Laboratory Services at IQVIA.
-              Since July 2024, I've worked freelance as a developer and researcher.  &amp; CSS!
-            </p>
-
-            <p>
-              Clients and Places I've worked{' '}
-              <a href="https://www.q2labsolutions.com/genomics-laboratories">Clinical Genomics Laboratory Services</a>,{' '}
-              I'm open to new opportunities in bioinformatics and beyond.
+              Hi! I’m a software engineer and researcher based in Austin, TX.
+              From 2018 to 2024, I developed next-generation sequencing data pipelines
+              and computational tools at <a href="https://www.q2labsolutions.com/genomics-laboratories">IQVIA's Translational Science Innovation Laboratory</a>{' '}.
+              Since August 2024, I've been freelancing as a developer and researcher.
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>
@@ -167,8 +161,8 @@ const About = () => {
             />
           </div>
         </StyledPic>
-      </div>
-    </StyledAboutSection>
+      </div >
+    </StyledAboutSection >
   );
 };
 

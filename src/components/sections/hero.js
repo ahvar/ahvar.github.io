@@ -29,7 +29,7 @@ const StyledHeroSection = styled.section`
   p {
     margin: 20px 0 0;
     max-width: 540px;
-    text-align: center; /* Center align text */
+    /* Remove text-align: center; */
   }
 
   .email-link {
@@ -60,24 +60,12 @@ const Hero = () => {
     const four = (
         <>
             <p>
-                Building Next-Gen Sequencing Data Pipelines.
-                <a href="https://github.com/ahvar" target="_blank" rel="noreferrer">
-                    My Github
-                </a>
+                Software engineer building next-generation sequencing data pipelines.
             </p>
         </>
     );
-    const five = (
-        <a
-            className="email-link"
-            href="https://github.com/ahvar/gene_annotator"
-            target="_blank"
-            rel="noreferrer">
-            Gene Annotator
-        </a>
-    );
 
-    const items = [one, two, three, four, five];
+    const items = [one, two, three, four];
 
     return (
         <StyledHeroSection>

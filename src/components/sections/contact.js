@@ -55,12 +55,12 @@ const Contact = () => {
 
   return (
     <StyledContactSection id="contact" ref={revealContainer}>
-      <h2 className="numbered-heading overline">What’s Next?</h2>
+      <h2 className="heading overline">What’s Next?</h2>
 
       <h2 className="title">Get In Touch</h2>
 
       <p>
-        Although I’m currently looking for any new opportunities!
+        I’m currently looking for any new opportunities!
       </p>
 
       <a className="email-link" href={`mailto:${email}`}>
