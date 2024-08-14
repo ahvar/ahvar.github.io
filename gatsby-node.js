@@ -2,11 +2,11 @@ const path = require('path');
 const _ = require('lodash');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-    const { createPage } = actions;
-    const postTemplate = path.resolve(`src/templates/post.js`);
-    const tagTemplate = path.resolve('src/templates/tag.js');
+  const { createPage } = actions;
+  const postTemplate = path.resolve(`src/templates/post.js`);
+  const tagTemplate = path.resolve('src/templates/tag.js');
 
-    const result = await graphql(`
+  const result = await graphql(`
     {
       postsRemark: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/content/posts/" } }
@@ -29,87 +29,88 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `);
 
-    // Handle errors
-    if (result.errors) {
-        reporter.panicOnBuild(`Error while running GraphQL query.`);
-        return;
-    }
+  // Handle errors
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
+  }
 
-    // Create post detail pages
-    const posts = result.data.postsRemark.edges;
+  // Create post detail pages
+  const posts = result.data.postsRemark.edges;
 
-    posts.forEach(({ node }) => {
-        createPage({
-            path: node.frontmatter.slug,
-            component: postTemplate,
-            context: {},
-        });
+  posts.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.slug,
+      component: postTemplate,
+      context: {},
     });
+  });
 
-    // Extract tag data from query
-    const tags = result.data.tagsGroup.group;
-    // Make tag pages
-    tags.forEach(tag => {
-        createPage({
-            path: `/pensieve/tags/${_.kebabCase(tag.fieldValue)}/`,
-            component: tagTemplate,
-            context: {
-                tag: tag.fieldValue,
-            },
-        });
+  // Extract tag data from query
+  const tags = result.data.tagsGroup.group;
+  // Make tag pages
+  tags.forEach(tag => {
+    createPage({
+      path: `/pensieve/tags/${_.kebabCase(tag.fieldValue)}/`,
+      component: tagTemplate,
+      context: {
+        tag: tag.fieldValue,
+      },
     });
+  });
 };
 
 // https://www.gatsbyjs.org/docs/node-apis/#onCreateWebpackConfig
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-    // https://www.gatsbyjs.org/docs/debugging-html-builds/#fixing-third-party-modules
-    if (stage === 'build-html' || stage === 'develop-html') {
-        actions.setWebpackConfig({
-            module: {
-                rules: [
-                    {
-                        test: /scrollreveal/,
-                        use: loaders.null(),
-                    },
-                    {
-                        test: /animejs/,
-                        use: loaders.null(),
-                    },
-                    {
-                        test: /miniraf/,
-                        use: loaders.null(),
-                    },
-                ],
-            },
-        });
-    }
-
+  // https://www.gatsbyjs.org/docs/debugging-html-builds/#fixing-third-party-modules
+  if (stage === 'build-html' || stage === 'develop-html') {
     actions.setWebpackConfig({
-        resolve: {
-            alias: {
-                '@components': path.resolve(__dirname, 'src/components'),
-                '@config': path.resolve(__dirname, 'src/config'),
-                '@fonts': path.resolve(__dirname, 'src/fonts'),
-                '@hooks': path.resolve(__dirname, 'src/hooks'),
-                '@images': path.resolve(__dirname, 'src/images'),
-                '@pages': path.resolve(__dirname, 'src/pages'),
-                '@styles': path.resolve(__dirname, 'src/styles'),
-                '@utils': path.resolve(__dirname, 'src/utils'),
-            },
-            fallback: {
-                fs: false,
-                path: require.resolve('path-browserify'),
-            },
-        },
+      module: {
+        rules: [
+          {
+            test: /scrollreveal/,
+            use: loaders.null(),
+          },
+          {
+            test: /animejs/,
+            use: loaders.null(),
+          },
+          {
+            test: /miniraf/,
+            use: loaders.null(),
+          },
+        ],
+      },
     });
+  }
+
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        '@components': path.resolve(__dirname, 'src/components'),
+        '@config': path.resolve(__dirname, 'src/config'),
+        '@fonts': path.resolve(__dirname, 'src/fonts'),
+        '@hooks': path.resolve(__dirname, 'src/hooks'),
+        '@images': path.resolve(__dirname, 'src/images'),
+        '@pages': path.resolve(__dirname, 'src/pages'),
+        '@styles': path.resolve(__dirname, 'src/styles'),
+        '@utils': path.resolve(__dirname, 'src/utils'),
+      },
+      fallback: {
+        fs: false,
+        path: require.resolve('path-browserify'),
+      },
+    },
+  });
 };
 
 // gatsby-node.js
 exports.createSchemaCustomization = ({ actions }) => {
-    const { createTypes } = actions;
-    createTypes(`
+  const { createTypes } = actions;
+  createTypes(`
       type MarkdownRemarkFrontmatter {
         cta: String
+        cover: File @fileByRelativePath
       }
     `);
 };
