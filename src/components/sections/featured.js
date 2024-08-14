@@ -308,7 +308,7 @@ const Featured = () => {
     {
       featured: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/content/featured/" } }
-        sort: { frontmatter: {date: ASC}}
+        sort: { frontmatter: { date: ASC } }
       ) {
         edges {
           node {
