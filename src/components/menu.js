@@ -137,6 +137,10 @@ const StyledSidebar = styled.aside`
         margin-bottom: 5px;
         color: var(--green);
         font-size: var(--fz-sm);
+
+        @media (max-width: 768px) {
+          content: '';
+        }
       }
     }
 
