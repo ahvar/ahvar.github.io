@@ -162,15 +162,19 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Arthur Vargas`,
-        short_name: `Arthur Vargas`,
-        start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        name: 'Arthur Vargas',
+        short_name: 'Arthur Vargas',
+        start_url: '/',
+        background_color: '#663399',
+        theme_color: '#663399',
+        display: 'minimal-ui',
+        icon: './src/images/night_desert.jpg', // Path to your custom icon
+        legacy: true,
+        theme_color_in_head: true,
+        cache_busting_mode: 'query',
+        crossOrigin: 'anonymous',
+        include_favicon: true,
+        cacheDigest: '4a9773549091c227cd2eb82ccd9c5e3a',
       },
     },
   ],
