@@ -18,7 +18,10 @@ const StyledAboutSection = styled.section`
     }
   }
 `;
+
 const StyledText = styled.div`
+  margin-top: 20px; /* Add margin to prevent overlap with the picture */
+
   ul.skills-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
@@ -46,6 +49,7 @@ const StyledText = styled.div`
     }
   }
 `;
+
 const StyledPic = styled.div`
   position: relative;
   max-width: 300px;
@@ -125,7 +129,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Python', 'Groovy', 'Nextflow', 'Docker', 'AWS', 'CI/CD'];
+  const skills = ['Python', 'Groovy', 'Nextflow', 'Docker', 'BASH', 'AWS', 'Azure DevOps', 'CI/CD'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>

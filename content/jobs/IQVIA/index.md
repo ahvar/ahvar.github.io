@@ -7,9 +7,11 @@ range: 'October 2018 - August 2024'
 url: 'https://www.q2labsolutions.com/genomics-laboratories'
 ---
 
-- Worked on primary analysis Nextflow pipeline for Illumina sequencing instruments, performing demultiplexing, extract and report quality control metrics for assays targeting cancer relevant genes.
-- Developed and deployed a Python-based CLI app to automate manual processes for evaluating Ion Torrent Genexus Sequencer run quality.
-- Utilized dacite Python module to convert HTTP payloads from sequencer APIs into Python dataclasses, enabling efficient, type-safe data transformation and clean access via dot notation.
-- Collaborated with DevOps to configure CI/CD pipelines by defining steps and jobs in build scripts and
-other templates, external code libraries, and docker images.
+- Led development of bioinformatics data pipelines for Illumina NGS assays, using Nextflow, Docker, Python, 
+and other technologies. Software adherence to 21 CFR GCP software compliance standards. 
+- Configured and optimized CI/CD pipelines in Azure DevOps, utilizing containerized software components and automated build processes to streamline deployments.
+- Enhanced client data delivery by developing Python-based CLI tools to automate manual processes for genomic data quality control and reporting.
+- Guided a remote engineering team, promoting software engineering best practices, object-oriented design, unit testing with modern frameworks, and leveraging AI tools like GitHub Copilot.
+- Automated cloud-based workflows using AWS services (S3, EC2, Lambda, ECS), reducing genomic assay runtime through parallelization and dynamic resource allocation strategies.
+
 

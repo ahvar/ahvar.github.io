@@ -5,31 +5,32 @@ import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
 
 const StyledHeroSection = styled.section`
+  padding-top: 100px; /* Increased padding to prevent overlap with the header */
+
   @media (max-width: 480px) {
     margin: 0 0 15px 0;
   }
 
   h2 {
     margin: 0 0 20px 0;
-    color: #ffffff; /* Change color for h2 */
+    color: #ffffff;
     font-size: clamp(var(--fz-lg), 5vw, var(--fz-xl));
-    font-weight: 700; /* Make the font bold */
+    font-weight: 700;
   }
 
   h3 {
     margin-top: 5px;
-    color: #a8a8a8; /* Change color for h3 */
+    color: #a8a8a8;
     line-height: 1.1;
   }
 
   .no-background {
-    background: none; /* Add your desired styles here */
+    background: none;
   }
 
   p {
     margin: 20px 0 0;
     max-width: 540px;
-    /* Remove text-align: center; */
   }
 
   .email-link {
@@ -60,7 +61,7 @@ const Hero = () => {
     const four = (
         <>
             <p>
-                Software engineer building next-generation sequencing data pipelines.
+                Software engineer building bioinformatics data pipelines.
             </p>
         </>
     );
