@@ -12,7 +12,7 @@ Professional history, skills, and projects.
 
 * Project built with **[Gatsby](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/#gatsby-cli)**
 * **[Node.js](https://nodejs.org/en/)**
-```
+
 ## Authors
 
 Contributors names and contact info
