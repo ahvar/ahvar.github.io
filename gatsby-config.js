@@ -13,7 +13,7 @@ module.exports = {
     title: 'Arthur Vargas',
     author: 'Arthur Vargas',
     description:
-      'Software engineer specializing in Next-Gen Sequencing data pipelines.',
+      'Software engineer building data pipelines and software tools for quantitative research.',
     siteUrl: 'https://arthurvargas.dev', // No trailing slash allowed!
     image: './static/welcome.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@ahvargas',
