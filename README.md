@@ -1,10 +1,10 @@
-# Project Title
+# Personal Website
 
-Professional Website.
+The initial release of [arthurvargas.dev](https://arthurvargas.dev).
 
 ## Description
 
-Description of professional history, skills, and projects.
+Professional history, skills, and projects.
 
 ## Getting Started
 
