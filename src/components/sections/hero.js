@@ -61,7 +61,7 @@ const Hero = () => {
     const four = (
         <>
             <p>
-                Software engineer building data pipelines and software tools.
+                Software engineer building data pipelines and scientific programming tools.
             </p>
         </>
     );
