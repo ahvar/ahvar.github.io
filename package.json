@@ -46,6 +46,9 @@
     "yarm": "^0.4.0",
     "yarn": "^1.22.22"
   },
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.24.8",
     "@babel/core": "^7.25.2",
