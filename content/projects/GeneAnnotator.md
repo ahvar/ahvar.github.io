@@ -1,7 +1,7 @@
 ---
 date: '1'
 title: 'Gene Annotator'
-cover: './gene_annotator_demo.png'
+cover: './gene_annotator_demo_alt.png'
 github: 'https://github.com/ahvar/gene_annotator'
 external: 'https://github.com/ahvar/gene_annotator'
 tech:

@@ -4,7 +4,17 @@ The initial release of [arthurvargas.dev](https://arthurvargas.dev).
 
 ## Description
 
-Professional history, skills, and projects.
+_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._ 
+
+## Requirements
+
+This project expects **Node.js 18**. If you use [nvm](https://github.com/nvm-sh/nvm) you can install the correct version and set it automatically:
+
+```bash
+nvm install 18.17.1
+nvm use
+```
+The repository includes an `.nvmrc` file so running `nvm use` will switch to the recommended version.
 
 ## Getting Started
 
