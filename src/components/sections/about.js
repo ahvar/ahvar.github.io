@@ -129,7 +129,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Python', 'Groovy', 'Nextflow', 'Docker', 'BASH', 'AWS', 'Azure DevOps', 'CI/CD'];
+  const skills = ['Python', 'SQLAlchemy', 'MySQL', 'Flask', 'Elasticsearch', 'Docker', 'AWS', 'BASH', 'Azure DevOps', 'Javascript'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -155,10 +155,10 @@ const About = () => {
               Hi! I’m a software engineer and researcher based in Austin, TX.
               From 2018 to 2024, I developed next-generation sequencing data pipelines
               and computational tools at <a href="https://labs.iqvia.com">IQVIA Laboratories</a>{' '}.
-              Since August 2024, I've been freelancing as a developer and researcher.
+              Check out my recent projects to see what I've been working on!
             </p>
 
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            <p>Here are a few technologies I’ve used recently:</p>
           </div>
 
           <ul className="skills-list">

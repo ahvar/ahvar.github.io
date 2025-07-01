@@ -7,10 +7,10 @@ range: 'October 2018 - August 2024'
 url: 'https://labs.iqvia.com/'
 ---
 
-- Developed a Python-based CLI tool to automate the retrieval of genomic run data (JSON) from a DNA sequencer RESTful API and project management data from a LIMS database. Generated reports for researchers, replacing a manual process for data delivery. 
-- Used Nextflow to orchestrate a primary analysis pipeline, integrating Dockerized software for demultiplexing, barcode checking, and reporting of Q30 bases. Orchestrated Nextflow processes across local HPC cluster.
-- Optimized cpu and memory management in a Linux HPC environment by configuring resource-intensive processes to dynamically adjust cpu allocation based on memory-related errors. Implemented limits to prevent resource contention and balance compute availability across the network.
-- Guided a global engineering team by delegating technical tasks, conducting code reviews, promoting modular software designs, and code coverage thresholds for CI/CD in Azure Devops (ADO).
-- Collaborated with software architects, project managers, bioinformaticians, and product owners in an Agile environment to translate internal customer needs into extensible, maintainable software, aligned with IT architectural standards and designed for scalability. 
+- Developed a Python CLI tool automating genomic data retrieval (JSON) from DNA sequencer APIs and project data from LIMS, replacing manual processes with automated QC reports. 
+- Built primary analysis pipelines using Nextflow on a local HPC cluster. Orchestrated Dockerized components for demultiplexing, barcode checking, and Q30 percentages.
+- Improved resource management in pipelines by configuring dynamic CPU allocation for resource-intensive processes based and implementing usage limits to maintain compute availability.
+- Led small team of engineers by delegating tasks, performing code reviews, promoting modular software designs, and applying code coverage thresholds within Azure DevOps CI/CD pipelines.
+- Collaborated cross-functionally with architects, bioinformaticians, project managers, and product owners in Agile teams to translate user requirements into maintainable software systems adhering to enterprise IT standards.
 
 
