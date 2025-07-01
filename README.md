@@ -11,7 +11,17 @@
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._ 
+
+## Requirements
+
+This project expects **Node.js 18**. If you use [nvm](https://github.com/nvm-sh/nvm) you can install the correct version and set it automatically:
+
+```bash
+nvm install 18.17.1
+nvm use
+```
+The repository includes an `.nvmrc` file so running `nvm use` will switch to the recommended version.
 
 ## 🚀 Quick start
 
