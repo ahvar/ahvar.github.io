@@ -140,7 +140,7 @@ const About = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/me.jpg"
+              src="../../images/profile_pic.jpg"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
@@ -154,7 +154,7 @@ const About = () => {
             <p>
               Hi! I’m a software engineer and researcher based in Austin, TX.
               From 2018 to 2024, I developed next-generation sequencing data pipelines
-              and computational tools at <a href="https://www.q2labsolutions.com/genomics-laboratories">IQVIA's Translational Science Innovation Laboratory</a>{' '}.
+              and computational tools at <a href="https://labs.iqvia.com">IQVIA Laboratories</a>{' '}.
               Since August 2024, I've been freelancing as a developer and researcher.
             </p>
 
